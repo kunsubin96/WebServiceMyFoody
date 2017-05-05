@@ -1,27 +1,47 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="MyFoody" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Connection Mode="WebSettings" ConnectionString="Data Source=KUNSUBIN\KUNSUBIN;Initial Catalog=MyFoody;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="MyFoodyConnectionString" Provider="System.Data.SqlClient" />
-  <Table Name="dbo.tbl_User" Member="tbl_Users">
-    <Type Name="tbl_User">
-      <Column Name="Username" Type="System.String" DbType="NChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="Password" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
-      <Column Name="HoTen" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(80)" CanBeNull="true" />
-      <Column Name="SDT" Type="System.String" DbType="NChar(11)" CanBeNull="true" />
-      <Column Name="Avatar" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+  <Table Name="dbo.tbl_BinhLuan" Member="tbl_BinhLuans">
+    <Type Name="tbl_BinhLuan">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID_NhaHang" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="ID_User" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="NoiDung" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="DanhGia" Type="System.Double" DbType="Float" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.tbl_TinhThanh" Member="tbl_TinhThanhs">
-    <Type Name="tbl_TinhThanh">
-      <Column Name="MaTinhThanh" Type="System.String" DbType="NChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="TenTinhThanh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+  <Table Name="dbo.tbl_DanhMuc" Member="tbl_DanhMucs">
+    <Type Name="tbl_DanhMuc">
+      <Column Name="ID" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+      <Column Name="TenDanhMuc" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.tbl_QuanHuyen" Member="tbl_QuanHuyens">
-    <Type Name="tbl_QuanHuyen">
-      <Column Name="MaQuanHuyen" Type="System.String" DbType="NChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="TenQuanHuyen" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="MaTinhThanh" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+  <Table Name="dbo.tbl_Duong" Member="tbl_Duongs">
+    <Type Name="tbl_Duong">
+      <Column Name="MaDuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TenDuong" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="MaQuanHuyen" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_ImageMoreNhaHang" Member="tbl_ImageMoreNhaHangs">
+    <Type Name="tbl_ImageMoreNhaHang">
+      <Column Name="ID_NhaHang" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Image" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Info" Member="tbl_Infos">
+    <Type Name="tbl_Info">
+      <Column Name="ID" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Photo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+      <Column Name="ID_NhaHang" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_MonAn" Member="tbl_MonAns">
+    <Type Name="tbl_MonAn">
+      <Column Name="ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TenMon" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ID_NhaHang" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_NhaHang" Member="tbl_NhaHangs">
@@ -40,48 +60,28 @@
       <Column Name="ID_DanhMucAnGi" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.tbl_MonAn" Member="tbl_MonAns">
-    <Type Name="tbl_MonAn">
-      <Column Name="ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="TenMon" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
-      <Column Name="ID_NhaHang" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+  <Table Name="dbo.tbl_QuanHuyen" Member="tbl_QuanHuyens">
+    <Type Name="tbl_QuanHuyen">
+      <Column Name="MaQuanHuyen" Type="System.String" DbType="NChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenQuanHuyen" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MaTinhThanh" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.tbl_Info" Member="tbl_Infos">
-    <Type Name="tbl_Info">
-      <Column Name="ID" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
-      <Column Name="Photo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="Date" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
-      <Column Name="ID_NhaHang" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
-      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+  <Table Name="dbo.tbl_TinhThanh" Member="tbl_TinhThanhs">
+    <Type Name="tbl_TinhThanh">
+      <Column Name="MaTinhThanh" Type="System.String" DbType="NChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenTinhThanh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.tbl_ImageMoreNhaHang" Member="tbl_ImageMoreNhaHangs">
-    <Type Name="tbl_ImageMoreNhaHang">
-      <Column Name="ID_NhaHang" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
-      <Column Name="Image" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.tbl_Duong" Member="tbl_Duongs">
-    <Type Name="tbl_Duong">
-      <Column Name="MaDuong" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
-      <Column Name="TenDuong" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
-      <Column Name="MaQuanHuyen" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.tbl_DanhMuc" Member="tbl_DanhMucs">
-    <Type Name="tbl_DanhMuc">
-      <Column Name="ID" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
-      <Column Name="TenDanhMuc" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.tbl_BinhLuan" Member="tbl_BinhLuans">
-    <Type Name="tbl_BinhLuan">
-      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="ID_NhaHang" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
-      <Column Name="ID_User" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
-      <Column Name="NoiDung" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
-      <Column Name="DanhGia" Type="System.Double" DbType="Float" CanBeNull="true" />
+  <Table Name="dbo.tbl_User" Member="tbl_Users">
+    <Type Name="tbl_User">
+      <Column Name="Username" Type="System.String" DbType="NChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(80)" CanBeNull="true" />
+      <Column Name="SDT" Type="System.String" DbType="NChar(11)" CanBeNull="true" />
+      <Column Name="Avatar" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

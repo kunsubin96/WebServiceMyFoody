@@ -515,5 +515,6 @@ namespace WebServiceMyFoody
         {
             return db.tbl_Infos.FirstOrDefault(x => x.ID_NhaHang == nhahang);
         }
+       //================================================================
     }
 }
