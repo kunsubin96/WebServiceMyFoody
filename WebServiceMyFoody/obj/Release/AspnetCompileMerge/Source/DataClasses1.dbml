@@ -3,7 +3,7 @@
   <Table Name="dbo.tbl_BinhLuan" Member="tbl_BinhLuans">
     <Type Name="tbl_BinhLuan">
       <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="ID_NhaHang" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="ID_NhaHang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="ID_User" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
       <Column Name="NoiDung" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
       <Column Name="DanhGia" Type="System.Double" DbType="Float" CanBeNull="true" />
@@ -24,8 +24,8 @@
   </Table>
   <Table Name="dbo.tbl_ImageMoreNhaHang" Member="tbl_ImageMoreNhaHangs">
     <Type Name="tbl_ImageMoreNhaHang">
-      <Column Name="ID_NhaHang" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
-      <Column Name="Image" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="ID_NhaHang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Image" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_Info" Member="tbl_Infos">
@@ -33,7 +33,7 @@
       <Column Name="ID" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
       <Column Name="Photo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="Date" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
-      <Column Name="ID_NhaHang" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="ID_NhaHang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
@@ -41,12 +41,12 @@
     <Type Name="tbl_MonAn">
       <Column Name="ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="TenMon" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
-      <Column Name="ID_NhaHang" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="ID_NhaHang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_NhaHang" Member="tbl_NhaHangs">
     <Type Name="tbl_NhaHang">
-      <Column Name="ID" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="MaTinhThanh" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
       <Column Name="MaQuanHuyen" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
       <Column Name="MaDuong" Type="System.String" DbType="NChar(20)" CanBeNull="true" />

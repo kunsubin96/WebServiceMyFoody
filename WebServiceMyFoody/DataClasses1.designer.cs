@@ -189,7 +189,7 @@ namespace WebServiceMyFoody
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_NhaHang", DbType="NChar(10)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_NhaHang", DbType="NVarChar(50)")]
 		public string ID_NhaHang
 		{
 			get
@@ -374,7 +374,7 @@ namespace WebServiceMyFoody
 		{
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_NhaHang", DbType="NChar(10)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_NhaHang", DbType="NVarChar(50)")]
 		public string ID_NhaHang
 		{
 			get
@@ -390,7 +390,7 @@ namespace WebServiceMyFoody
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Image", DbType="NVarChar(20)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Image", DbType="NVarChar(50)")]
 		public string Image
 		{
 			get
@@ -473,7 +473,7 @@ namespace WebServiceMyFoody
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_NhaHang", DbType="NChar(10)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_NhaHang", DbType="NVarChar(50)")]
 		public string ID_NhaHang
 		{
 			get
@@ -552,7 +552,7 @@ namespace WebServiceMyFoody
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_NhaHang", DbType="NChar(10)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_NhaHang", DbType="NVarChar(50)")]
 		public string ID_NhaHang
 		{
 			get
@@ -634,7 +634,7 @@ namespace WebServiceMyFoody
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="NChar(10) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="NVarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
 		public string ID
 		{
 			get

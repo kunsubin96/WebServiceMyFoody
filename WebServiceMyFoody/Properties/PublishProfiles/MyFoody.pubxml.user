@@ -76,19 +76,19 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/18/2015 20:19:46</publishTime>
     </File>
     <File Include="bin/WebServiceMyFoody.dll">
-      <publishTime>05/05/2017 10:19:13</publishTime>
+      <publishTime>05/18/2017 22:33:24</publishTime>
     </File>
     <File Include="DataClasses1.dbml">
-      <publishTime>05/05/2017 10:18:43</publishTime>
+      <publishTime>05/18/2017 22:18:13</publishTime>
     </File>
     <File Include="packages.config">
       <publishTime>04/19/2017 14:29:27</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>05/05/2017 10:19:16</publishTime>
+      <publishTime>05/18/2017 22:33:25</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>04/19/2017 19:13:41</publishTime>
+      <publishTime>05/18/2017 21:24:36</publishTime>
     </File>
     <File Include="WebService.asmx">
       <publishTime>04/19/2017 14:30:09</publishTime>

@@ -515,6 +515,39 @@ namespace WebServiceMyFoody
         {
             return db.tbl_Infos.FirstOrDefault(x => x.ID_NhaHang == nhahang);
         }
-       //================================================================
+        //================================================================
+        [WebMethod]
+        public bool insertNhaHang(string ID,string TenNhaHang, string DiaChi, string SDT, string TinhThanh, string QuanHuyen,string Duong,string DanhMucODau)
+        {
+            bool f = false;
+
+
+            tbl_NhaHang nhahang = new tbl_NhaHang();
+            nhahang.ID = ID;
+            nhahang.TenNhaHang = TenNhaHang;
+            nhahang.DiaChi = DiaChi;
+            nhahang.DienThoai = SDT;
+            nhahang.MaTinhThanh = TinhThanh;
+            nhahang.MaQuanHuyen = QuanHuyen;
+            nhahang.MaDuong = Duong;
+            nhahang.ID_DanhMucODau = DanhMucODau;
+            nhahang.LuotXem = 0;
+            nhahang.DanhGia = 0;
+            // Add the new object to the Orders collection.
+            db.tbl_NhaHangs.InsertOnSubmit(nhahang);
+
+            // Submit the change to the database.
+            try
+            {
+                db.SubmitChanges();
+                f = true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                f = false;
+            }
+            return f;
+        }
     }
 }
